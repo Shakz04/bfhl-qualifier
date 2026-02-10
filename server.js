@@ -45,6 +45,13 @@ function lcm(a, b) {
   return Math.abs(a * b) / gcd(a, b);
 }
 
+app.get("/bfhl", (req, res) => {
+  res.status(200).json({
+    is_success: true,
+    official_email: EMAIL,
+    message: "Use POST method to access this endpoint"
+  });
+});
 
 // ================= BFHL =================
 app.post("/bfhl", async (req, res) => {
